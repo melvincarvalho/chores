@@ -5,7 +5,7 @@ const infile = __dirname + '/../webcredits/webcredits.json'
 
 var credits = require(infile)
 
-const points = process.argv[2]
+const points = parseInt(process.argv[2])
 const secondsSinceEpoch = Math.round(Date.now() / 1000)
 
 if (points) {
