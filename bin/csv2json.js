@@ -13,8 +13,14 @@ const credits = csv.split('\n')
 var output = []
 
 credits.forEach(element => {
+  if (!element) return
   const credit = element.split(' ')
-  const out = { 'amount': credit[0], 'timestamp': credit[1] }
+  if (!credit.length) return
+
+  const out = { amount: credit[0], timestamp: credit[1] }
+  output.push(out)
   console.log(out)
 })
+
+console.log(output)
 
