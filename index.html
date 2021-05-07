@@ -1,8 +1,13 @@
+<html>
+  <head>
+
+<link rel="stylesheet" href="css/spuxblue.css" />
 
 <script type="application/ld+json" id="data"></script>
 <script type="module">
   import { html, render } from 'https://spux.net/spux'
   import 'https://spux.net/dior'
+  import Navbar from './components/Navbar.js'
 
   globalThis.spux = {}
   spux.month = []
@@ -65,6 +70,11 @@
 
     render(
       html`
+      <${Navbar} title="Liquid Pub Assets" />
+
+
+
+
         <pre>
             ${spux.all[new Date().getFullYear()].map((i, j) => {
             return html`
@@ -97,3 +107,7 @@
 
   renderAll()
 </script>
+  
+</head>
+<body></body>
+</html>
