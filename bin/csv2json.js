@@ -2,9 +2,10 @@
 
 const fs = require('fs')
 
-const file = './webcredits/webcredits.csv'
+const infile = './webcredits/webcredits.csv'
+const outfile = './webcredits/webcredits.json'
 
-var csv = fs.readFileSync(file)
+var csv = fs.readFileSync(infile)
 if (csv) {
   csv = csv.toString()
 }
@@ -18,9 +19,12 @@ credits.forEach(element => {
   if (!credit.length) return
 
   const out = { amount: credit[0], timestamp: credit[1] }
+
+  if (out.amount === '') return
+
   output.push(out)
   console.log(out)
 })
 
 console.log(output)
-
+fs.writeFileSync(outfile, JSON.stringify(output, null, 2))
