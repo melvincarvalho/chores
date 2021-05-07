@@ -174,5 +174,21 @@
  {
   "amount": 25,
   "timestamp": 1620416787
+ },
+ {
+  "amount": 100,
+  "timestamp": 1620419100
+ },
+ {
+  "amount": 100,
+  "timestamp": 1620419101
+ },
+ {
+  "amount": 100,
+  "timestamp": 1620419102
+ },
+ {
+  "amount": 100,
+  "timestamp": 1620419103
  }
 ]
