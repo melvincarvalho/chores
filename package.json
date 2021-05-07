@@ -1,0 +1,21 @@
+{
+  "name": "mychores",
+  "version": "0.0.1",
+  "description": "chores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm exec -y http-server",
+    "update": "it pull origin $(git rev-parse --abbrev-ref HEAD)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvincarvalho/chores.git"
+  },
+  "author": "Melvin Carvalho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/melvincarvalho/chores/issues"
+  },
+  "homepage": "https://github.com/melvincarvalho/chores#readme"
+}
