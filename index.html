@@ -1,113 +1,136 @@
 <html>
   <head>
+    <link rel="stylesheet" href="css/spuxblue.css" />
 
-<link rel="stylesheet" href="css/spuxblue.css" />
+    <script type="application/ld+json" id="data"></script>
+    <script type="module">
+      import { html, render } from 'https://spux.net/spux'
+      import 'https://spux.net/dior'
+      import Navbar from './components/Navbar.js'
 
-<script type="application/ld+json" id="data"></script>
-<script type="module">
-  import { html, render } from 'https://spux.net/spux'
-  import 'https://spux.net/dior'
-  import Navbar from './components/Navbar.js'
+      globalThis.spux = {}
+      spux.month = []
+      spux.monthTotal = 0
+      spux.year = []
+      spux.yearTotal = 0
+      spux.items = []
+      spux.totals = []
 
-  globalThis.spux = {}
-  spux.month = []
-  spux.monthTotal = 0
-  spux.year = []
-  spux.yearTotal = 0
-  spux.items = []
-  spux.totals = []
+      spux.date = new Date().getDate()
 
-  spux.date = new Date().getDate()
+      spux.all = []
+      spux.today = []
 
-  spux.all = []
+      fetch('webcredits/webcredits.json')
+        .then(response => response.json())
+        .then(log => {
+          console.log(log)
+          spux.items = log.map(i => {
+            let d = new Date(i.timestamp * 1000)
+            let points = parseInt(i.amount)
+            let date = d.getDate()
+            var ret = {
+              time: d,
+              points: points,
+              description: i.description
+            }
 
-  fetch('webcredits/webcredits.json')
-    .then(response => response.json())
-    .then(log => {
-      console.log(log)
-      spux.items = log.map(i => {
-        let d = new Date(i.timestamp * 1000)
-        let points = parseInt(i.amount)
-        let date = d.getDate()
-        var ret = {
-          time: d,
-          points: points,
-          description: i.description
-        }
+            let month = d.getMonth()
+            let fullYear = d.getFullYear()
 
-        let month = d.getMonth()
-        let fullYear = d.getFullYear()
+            if (month === undefined) return
 
-        if (month === undefined) return
+            if (!spux.all[fullYear]) spux.all[fullYear] = []
+            if (!spux.all[fullYear][month]) spux.all[fullYear][month] = []
+            if (!spux.all[fullYear][month][date])
+              spux.all[fullYear][month][date] = 0
+            spux.all[fullYear][month][date] += points
 
-        if (!spux.all[fullYear]) spux.all[fullYear] = []
-        if (!spux.all[fullYear][month]) spux.all[fullYear][month] = []
-        if (!spux.all[fullYear][month][date])
-          spux.all[fullYear][month][date] = 0
-        spux.all[fullYear][month][date] += points
+            // today
+            if (d.getDate() === new Date().getDate() && d.getMonth() === new Date().getMonth() && d.getFullYear() === new Date().getFullYear() ) {
+              const hour = d.getHours()
+              if (!spux.today[hour]) spux.today[hour] = 0
+              spux.today[hour] += points
+            }
 
-        return ret
-      })
+            return ret
+          })
 
-      console.log(spux.items)
+          console.log(spux.items)
 
-      renderAll()
-    })
+          renderAll()
+        })
 
-  function renderAll () {
-    spux.month = spux.items?.filter(
-      i =>
-        i.time.getMonth() === new Date().getMonth() &&
-        i.time.getFullYear() === new Date().getFullYear()
-    )
-    spux.month.forEach(i => {
-      // console.log(i)
-      let date = i.time.getDate()
-      spux.totals[date] = spux.totals[date] || 0
-      spux.totals[date] += i.points
-      spux.monthTotal += i.points
-    })
+      function renderAll () {
+        spux.month = spux.items?.filter(
+          i =>
+            i.time.getMonth() === new Date().getMonth() &&
+            i.time.getFullYear() === new Date().getFullYear()
+        )
+        spux.month.forEach(i => {
+          // console.log(i)
+          let date = i.time.getDate()
+          spux.totals[date] = spux.totals[date] || 0
+          spux.totals[date] += i.points
+          spux.monthTotal += i.points
+        })
 
-    render(
-      html`
-      <${Navbar} title="Chores" />
+        console.log('today', spux.today)
 
+        render(
+          html`
+            <${Navbar} title="Chores" />
 
+            <pre>
+          Month${'\n'}${'\n'}
 
-
-        <pre>
             ${spux.all[new Date().getFullYear()].map((i, j) => {
-            return html`
-              ${j + 1}${' '}
-              ${i.reduce((total, num) => {
-                return Math.abs(total) + Math.abs(num)
-              })}${'\n'}
-            `
-          })}
+                return html`
+                  ${j + 1}${' '}
+                  ${i.reduce((total, num) => {
+                    return Math.abs(total) + Math.abs(num)
+                  })}${'\n'}
+                `
+              })}
             </pre
-        >
-        <pre>
+            >
+
+            <pre>
+          Day${'\n'}${'\n'}
           
           ${spux.totals.map(
-            (i, j) =>
-              html`
-                ${j} ${i}${'\n'}
-              `
-          )}
-            ${'\n'}
-            Total: ${spux.monthTotal} ${'\n'}
-
-            Average: ${spux.monthTotal / spux.date}
+                (i, j) =>
+                  html`
+                    ${j} ${i}${'\n'}
+                  `
+              )}
           </pre
-        >
-      `,
-      document.body
-    )
-  }
+            >
 
-  renderAll()
-</script>
-  
-</head>
-<body></body>
+            <pre>
+          Hour${'\n'}${'\n'}
+          
+          ${spux.today.map(
+                (i, j) =>
+                  html`
+                    ${j} ${i}${'\n'}
+                  `
+              )}
+          </pre
+            >
+
+            <pre>
+          Month Tot: ${spux.monthTotal} ${'\n'}
+          Daily Ave: ${spux.monthTotal / spux.date}${'\n'}
+          </pre
+            >
+          `,
+          document.body
+        )
+      }
+
+      renderAll()
+    </script>
+  </head>
+  <body></body>
 </html>
