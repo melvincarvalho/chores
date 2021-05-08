@@ -8,7 +8,7 @@ BTMEXE="ssh ubuntu@157.90.144.229"
 
 
 git pull origin gh-pages
-git add webcredits
+git add .
 git commit -m "$MESSAGE"
 
 git log -1 --pretty=%s | grep '^gitmark '
