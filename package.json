@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm exec -y http-server",
-    "update": "pm2 start bin/deploy.sh --restart-delay=300000 --name mychores"
+    "start": "npm run server && npm run updater",
+    "server": "pm2 start --name mychores-server npm -- exec serve -y ",
+    "updater": "pm2 start --name mychores-updater bin/deploy.sh --restart-delay=300000"
   },
   "repository": {
     "type": "git",
