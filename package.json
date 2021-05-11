@@ -1,12 +1,12 @@
 {
   "name": "mychores",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "chores",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm exec -y http-server",
-    "update": "git pull origin $(git rev-parse --abbrev-ref HEAD)"
+    "update": "pm2 start bin/deploy.sh --restart-delay=300000 --name mychores"
   },
   "repository": {
     "type": "git",
