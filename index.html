@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/spuxblue.css" />
-    <meta http-equiv="refresh" content="300" >
+    <meta http-equiv="refresh" content="300" />
 
     <script type="application/ld+json" id="data"></script>
     <script type="module">
@@ -48,7 +48,11 @@
             spux.all[fullYear][month][date] += points
 
             // today
-            if (d.getDate() === new Date().getDate() && d.getMonth() === new Date().getMonth() && d.getFullYear() === new Date().getFullYear() ) {
+            if (
+              d.getDate() === new Date().getDate() &&
+              d.getMonth() === new Date().getMonth() &&
+              d.getFullYear() === new Date().getFullYear()
+            ) {
               const hour = d.getHours()
               if (!spux.today[hour]) spux.today[hour] = 0
               spux.today[hour] += points
@@ -83,17 +87,15 @@
             <${Navbar} title="Chores" />
 
             <pre>
-          Month${'\n'}${'\n'}
-
-            ${spux.all[new Date().getFullYear()].map((i, j) => {
-                return html`
-                  ${j + 1}${' '}
-                  ${i.reduce((total, num) => {
-                    return Math.abs(total) + Math.abs(num)
-                  })}${'\n'}
-                `
-              })}
-            </pre
+          Hour${'\n'}${'\n'}
+          
+          ${spux.today.map(
+                (i, j) =>
+                  html`
+                    ${j} ${i}${'\n'}
+                  `
+              )}
+          </pre
             >
 
             <pre>
@@ -109,15 +111,17 @@
             >
 
             <pre>
-          Hour${'\n'}${'\n'}
-          
-          ${spux.today.map(
-                (i, j) =>
-                  html`
-                    ${j} ${i}${'\n'}
-                  `
-              )}
-          </pre
+          Month${'\n'}${'\n'}
+
+            ${spux.all[new Date().getFullYear()].map((i, j) => {
+                return html`
+                  ${j + 1}${' '}
+                  ${i.reduce((total, num) => {
+                    return Math.abs(total) + Math.abs(num)
+                  })}${'\n'}
+                `
+              })}
+            </pre
             >
 
             <pre>
