@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run server && npm run updater",
-    "server": "pm2 start --name mychores-server npm -- exec serve -y ",
+    "server": "pm2 start --name mychores-server npx -- serve -y ",
     "updater": "pm2 start --name mychores-updater bin/deploy.sh --restart-delay=300000"
   },
   "repository": {
