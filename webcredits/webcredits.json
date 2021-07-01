@@ -1378,5 +1378,9 @@
  {
   "amount": 100,
   "timestamp": 1625173601
+ },
+ {
+  "amount": 5,
+  "timestamp": 1625174451
  }
 ]
