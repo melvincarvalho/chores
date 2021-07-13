@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run server && npm run updater",
-    "server": "pm2 start --name mychores-server npx -- serve",
+    "server": "pm2 start --name mychores-server bin/serve.sh",
     "updater": "pm2 start --name mychores-updater bin/deploy.sh --restart-delay=300000"
   },
   "keywords": [
     "gitmark"
-  ],  
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/melvincarvalho/chores.git"
