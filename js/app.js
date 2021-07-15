@@ -1,7 +1,7 @@
 import { html, render } from '../js/spux.js'
 import Navbar from '../components/Navbar.js'
 
-const creditsUri = '../webcredits/webcredits.json'
+const creditsUri = './webcredits/webcredits.json'
 
 globalThis.spux = {}
 spux.month = []
