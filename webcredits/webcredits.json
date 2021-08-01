@@ -1982,5 +1982,509 @@
  {
   "amount": 25,
   "timestamp": 1626818417
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626853865
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626853866
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626871823
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626871823
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626876037
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626876037
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626904991
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626905283
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626905381
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626905720
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626905720
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626906538
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626906540
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626909355
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626909356
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626909433
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626940275
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626950070
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626950070
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626950071
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626950071
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626950071
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626951667
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626951668
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626951668
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626951669
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626951669
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626952386
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626952387
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626955321
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626955321
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626955322
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626956607
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626956607
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626960978
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626960979
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626960979
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626960979
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626960980
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626961342
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626961342
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626966329
+ },
+ {
+  "amount": 25,
+  "timestamp": 1626966331
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626967945
+ },
+ {
+  "amount": 100,
+  "timestamp": 1626974901
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627152461
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627156294
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627157953
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627157954
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627157954
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627160011
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627232254
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627232345
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627301620
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627301724
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627301878
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627302043
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627302043
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627302043
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627302044
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627302085
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627302287
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627302382
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627302634
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627302802
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627302894
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627303065
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627303488
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627303489
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627303674
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627303674
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627304848
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627305158
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627308363
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627330608
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627330612
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627330613
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627338766
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627503063
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627503064
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627503065
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627503065
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627503066
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627549798
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627556260
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627582700
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627588955
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627589618
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627589879
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627590293
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627590483
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627590484
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627590484
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627590485
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627631357
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627636815
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627636817
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627636817
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627638600
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627638600
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627638601
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627638601
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627638602
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627648479
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627648480
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627648481
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627667434
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627667435
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627755321
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627755419
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627769514
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627769514
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627771218
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627771218
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627771219
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627771220
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627790098
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627790102
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627813566
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627813566
+ },
+ {
+  "amount": 5,
+  "timestamp": 1627817847
+ },
+ {
+  "amount": 100,
+  "timestamp": 1627817848
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627817849
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627819076
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627819077
+ },
+ {
+  "amount": 25,
+  "timestamp": 1627819078
  }
 ]
