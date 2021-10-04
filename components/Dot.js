@@ -1,4 +1,4 @@
-import { html } from 'https://unpkg.com/spux?module'
+import { Component, h, html, render } from '../js/spux.js
 
 const Dot = (i, j, row) => {
   var amount = Math.floor(i / 41)

@@ -1,6 +1,6 @@
-import { html } from 'https://unpkg.com/spux?module'
+import { Component, h, html, render } from '../js/spux.js'
 
-export default function Navbar (props) {
+export default function Navbar(props) {
   let title = props.title || 'Spux'
   return html`
     <div id="navbar" style="margin-top: -10px; margin-bottom: -10px;">

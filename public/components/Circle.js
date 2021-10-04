@@ -1,7 +1,7 @@
-import { Component, h, html, render } from 'https://unpkg.com/spux?module'
+import { Component, h, html, render } from '../js/spux.js'
 
 export default class Circle extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       amount: props.amount,
@@ -9,7 +9,7 @@ export default class Circle extends Component {
     }
   }
 
-  render () {
+  render() {
     return html`
       <svg width="300" height="300" viewBox="-25 -25 400 400">
         <${InnerCircle} />
@@ -38,10 +38,10 @@ const InnerCircle = props => html`
 `
 
 class OuterCircle extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
-  render () {
+  render() {
     return html`
       <circle
         cx="175"
@@ -49,17 +49,17 @@ class OuterCircle extends Component {
         stroke-dashoffset="1100"
         stroke-dasharray="1100"
         stroke="${'rgb(' +
-          (this.props.hour * 255) / 410.0 +
-          ', ' +
-          ((410 - this.props.hour) * 255) / 410.0 +
-          ', 0)'}"
+      (this.props.hour * 255) / 410.0 +
+      ', ' +
+      ((410 - this.props.hour) * 255) / 410.0 +
+      ', 0)'}"
         transform="rotate(-90 175 175)"
         fill="none"
         stroke-width="30"
         stroke-linecap="round"
         r="175"
         style="stroke-dashoffset : ${((360 - this.props.amount) * 1100) /
-          360} ; transition: all 1s ease-out 0s"
+      360} ; transition: all 1s ease-out 0s"
       ></circle>
     `
   }
@@ -68,17 +68,17 @@ class OuterCircle extends Component {
 const Text = props => html`
   <text
     fill=${'rgb(' +
-      ((props.hour % 410) * 255) / 410.0 +
-      ', ' +
-      ((410 - (props.hour % 410)) * 255) / 410.0 +
-      ', 0)'}
+  ((props.hour % 410) * 255) / 410.0 +
+  ', ' +
+  ((410 - (props.hour % 410)) * 255) / 410.0 +
+  ', 0)'}
     x="50%"
     y="50%"
     dx="-25"
     text-anchor="middle"
     style=${{
-      font: 'bold 5rem Helvetica, Arial, sans-serif'
-    }}
+    font: 'bold 5rem Helvetica, Arial, sans-serif'
+  }}
   >
     ${props.amount}
   </text>
