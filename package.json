@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/melvincarvalho/chores/issues"
   },
-  "homepage": "https://github.com/melvincarvalho/chores#readme"
+  "homepage": "https://github.com/melvincarvalho/chores#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
 }

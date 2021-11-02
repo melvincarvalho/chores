@@ -19,6 +19,7 @@ then
 fi
 
 git push origin gh-pages
+git push gogs gh-pages
 
 # run twice in case new tx is not there
 git mark
@@ -44,4 +45,5 @@ RES=$(git commit --allow-empty -m "gitmark ${HASH}")
 echo "${RES}"
 
 git push origin gh-pages
+git push gogs gh-pages
 
