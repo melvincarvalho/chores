@@ -1,6 +1,6 @@
 {
   "name": "mychores",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "chores",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "keywords": [
     "gitmark"
   ],
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/melvincarvalho/chores.git"
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/melvincarvalho/chores#readme",
   "dependencies": {
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "path": "^0.12.7",
+    "skill-updater": "^0.0.5",
+    "url": "^0.11.0"
   }
 }
