@@ -4,7 +4,7 @@
 import { execSync as $ } from 'child_process'
 import WebSocket from 'ws'
 
-var TIME = 300000
+var TIME = 432000000
 
 var wsdeploy = true
 
