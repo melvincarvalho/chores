@@ -4,7 +4,7 @@
 import { execSync as $ } from 'child_process'
 import WebSocket from 'ws'
 
-var TIME = 432000000
+var TIME = 300000
 
 var wsdeploy = true
 
@@ -15,18 +15,23 @@ function loop() {
   console.log('out', out)
 }
 
+function getLastCommit() {
+  var lastCommit = $('./bin/gitmark.sh').toString()
+  console.log(lastCommit)
+  lastCommit = lastCommit?.replace(' ', ':')
+  return lastCommit
+}
+
 loop()
 setInterval(loop, TIME)
 
 if (wsdeploy) {
-  const ws = new WebSocket('ws://gitmark.me:4444')
+  const ws = new WebSocket('ws://localhost:4444')
 
   ws.on('open', function open() {
     console.log('opened')
 
-    var lastCommit = $('./bin/gitmark.sh').toString()
-    console.log(lastCommit)
-    lastCommit?.replace(' ', ':')
+    var lastCommit = getLastCommit()
 
     ws.send('sub ' + lastCommit + ':0')
   })
@@ -35,8 +40,10 @@ if (wsdeploy) {
     console.log('received: %s', message)
     // todo if pub run loop
     var tuple = message.split(' ')
-    if (tuple[0] === pub) {
+    if (tuple[0] === 'pub') {
       $('git pull origin gh-pages')
+      var lastCommit = getLastCommit()
+
     }
   })
 }
