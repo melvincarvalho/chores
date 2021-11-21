@@ -1,5 +1,6 @@
 import { html, render } from '../js/spux.js'
 import Navbar from '../components/Navbar.js'
+import Footer from '../components/Footer.js'
 
 const creditsUri = './webcredits/webcredits.json'
 
@@ -123,6 +124,7 @@ function renderAll() {
         Daily Ave: ${spux.monthTotal / spux.date}${'\n'}
       </pre
       >
+      <${Footer} text="chores app" genesis="gitmark:48a5e0fbf0cf4e660d10d20544e67e003eb973bdb80589cc6560d1bd6c6f1cbb:1" />
       `,
     document.body
   )
