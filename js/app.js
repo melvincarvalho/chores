@@ -17,6 +17,8 @@ spux.date = new Date().getDate()
 spux.all = []
 spux.today = []
 
+const genesis = 'gitmark:48a5e0fbf0cf4e660d10d20544e67e003eb973bdb80589cc6560d1bd6c6f1cbb:1'
+
 fetch(creditsUri)
   .then(response => response.json())
   .then(log => {
@@ -124,7 +126,11 @@ function renderAll() {
         Daily Ave: ${spux.monthTotal / spux.date}${'\n'}
       </pre
       >
-      <${Footer} text="chores app" genesis="gitmark:48a5e0fbf0cf4e660d10d20544e67e003eb973bdb80589cc6560d1bd6c6f1cbb:1" />
+
+      <footer>
+Genesis | <i><a style="color:blue" target="_blank" href="https://gitmark.info/${genesis.toString().split(':')[1]}">${genesis.toString()}</a></i> | <a a style="color:blue" href="https://git-mark.com/">Git Mark</a>
+</footer>
+
       `,
     document.body
   )
