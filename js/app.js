@@ -127,9 +127,7 @@ function renderAll() {
       </pre
       >
 
-      <footer>
-Genesis | <i><a style="color:blue" target="_blank" href="https://gitmark.info/${genesis.toString().split(':')[1]}">${genesis.toString()}</a></i> | <a a style="color:blue" href="https://git-mark.com/">Git Mark</a>
-</footer>
+      <${Footer} genesis=${genesis.toString()} />
 
       `,
     document.body
