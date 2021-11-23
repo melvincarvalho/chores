@@ -127,7 +127,7 @@ function renderAll() {
       </pre
       >
 
-      <${Footer} genesis=${genesis.toString()} />
+      <${Footer} text="Chores App" genesis=${genesis.toString()} />
 
       `,
     document.body
