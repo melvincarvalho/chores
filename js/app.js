@@ -1,4 +1,5 @@
 import { html, render } from '../js/spux.js'
+import '../js/nostrefresh.js'
 import Navbar from '../components/Navbar.js'
 import Footer from '../components/Footer.js'
 
